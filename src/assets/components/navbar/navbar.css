@@ -74,13 +74,7 @@
     color: black;
 }
 
-/* .side-bar .side-bar-last-btn {
-    background: #127F47;
-    padding: 8px 10px;
-    border-radius: 25px;
-    width: 280px;
-    text-align: center;
-} */
+
 
 .side-bar .side-bar-last-btn {
     background: #127F47;
@@ -187,7 +181,7 @@
         margin: 40px 20px 20px 20px;
         z-index: 99999;
         font-size: 2rem;
-        position: fixed;
+        /* position: fixed; */
         right: 15px;
 
     }

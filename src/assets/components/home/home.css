@@ -1,0 +1,274 @@
+.home-main{
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw 6vw 2vw 6vw;
+    flex-wrap: wrap;
+}
+.video-container {
+    border-radius: 1rem;
+    position: relative;
+    width:45vw;  
+    height: 30vw; 
+    margin: 0 auto; 
+    box-shadow: 0px 8px 15px rgba(12, 12, 12, 0.2);
+}
+
+
+/* .video-container iframe {
+    border-radius: 1rem;
+
+} */
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+.banner {
+    position: absolute;
+    border-radius: 1rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); 
+    cursor: pointer; 
+    z-index: 1;
+    transition: background-color 0.3s ease;
+    overflow: hidden; 
+}
+
+
+.banner:hover img{
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.banner img {
+    transition: all 0.3s ease;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    z-index: -1;
+}
+
+
+.play-button {
+    position: absolute;
+    font-size: 2.5vw; 
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    padding: 1.5vw;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease; 
+    z-index: 2; 
+}
+
+.play-button div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+
+}
+
+.play-button:hover {
+    background: rgba(0, 0, 0, 0.9); 
+    transform: scale(1.1); 
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; 
+}
+
+.modal-content {
+    position: absolute; 
+    background: white;
+    padding: 2vw;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    max-width: 90%;
+    max-height: 90%;
+    cursor: move; 
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    font-style: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+
+.home-details{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.cta-button{
+    max-width: 20vw;
+    padding: .5vw .5vw;
+    border-radius: 25px;
+    color: #fff;
+    background-color: #000;
+}
+.home-details .main-text{
+  font-size: 2vw;
+  color: #000;
+  font-weight: 700;
+  max-width: 30vw;
+  margin-bottom: 1rem;
+}
+.ratings {
+    display: flex;
+    align-items: center; 
+    gap: 1rem; 
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.rating-text {
+    font-size: 1rem; 
+    font-weight: 600;
+}
+
+.detials-rating {
+    display: flex;
+    gap: 5px; 
+    align-items: center;
+}
+.star {
+    font-size: 24px; 
+    position: relative;
+    color: lightgray; 
+    transition: color 0.3s ease; 
+}
+
+.star.filled {
+    color: #F6BB06; 
+}
+.half-filled {
+    background: linear-gradient(90deg, #F6BB06 50%, lightgray 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+.review-count {
+    font-size: 1.1rem;
+    color: #555; 
+}
+
+.trustindex {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+    font-size: 1.1rem;
+}
+
+.trustindex-icon {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: #1A976A;
+}
+
+
+.home-details .agency-info{
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+
+}
+
+.agency-info .strategy-session{
+    padding: 12px 30px;
+    background-color: #0D904D;
+    color: #fff;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+.agency-info .explore-roles{
+    padding: 10px 20px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+@media (max-width: 1130px) {
+    .home-main{
+        flex-direction: column-reverse;
+        gap: 1.6rem;
+    }
+    .video-container{
+        height: 60vw;
+        width: 100%;
+    }
+
+    .cta-button{
+        max-width: 35vh;        
+    }
+    .home-details .main-text{
+      font-size: 4vw;
+      max-width: 100%;
+    }
+    .ratings {
+        gap: .5rem; 
+        font-size: 2vw;
+    }
+    
+    .rating-text {
+        font-size: 2vw; 
+        font-weight: 600;
+    }
+    
+    .detials-rating {
+        font-size: 1vw; 
+       
+    }
+    .review-count, .trustindex{
+        font-size: 3vw;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .agency-info{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
