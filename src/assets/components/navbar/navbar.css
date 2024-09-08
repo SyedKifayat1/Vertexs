@@ -178,11 +178,12 @@
     .nav-toggler {
         display: block;
         cursor: pointer;
-        margin: 40px 20px 20px 20px;
+        /* margin: 5.5vw 4.75vw 1.25vw 1.25vw; */
+        margin: 40px 60px 20px 20px;
         z-index: 99999;
         font-size: 2rem;
         /* position: fixed; */
-        right: 15px;
+        /* right: 20px; */
 
     }
 
@@ -201,7 +202,8 @@
 
 @media (max-width: 650px) {
     .nav-toggler {
-        right: 10px;
+        margin: 40px 30px 20px 20px;
+
     }
 
     .bottom-nav .logo-nav {
