@@ -83,14 +83,14 @@ const Home = () => {
             </div>
             <div className="home-video">
                 <div className="video-container">
-                    <iframe
+                    {/* <iframe
                         id="video-frame"
                         src="https://www.youtube.com/embed/sQEeFi6k2EY"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                         title="Video"
-                    ></iframe>
+                    ></iframe> */}
                     <div className="banner" onClick={handleBannerClick}>
                         <img src={Banner} alt="Banner" className="banner-img" />
                         <div className="play-button">
