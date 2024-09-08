@@ -3,17 +3,19 @@
     justify-content: space-between;
     background: #F8F8F8;
     padding: 10px 60px;
-    font-size: 1.2rem;
+    font-family: "Jost", sans-serif;
+    font-weight: 700;
 }
 
 .main_navbar .top-bar a {
     color: #787777;
-
 }
 
 .top-bar .nav-social-links, .top-bar .nav-text-links {
     display: flex;
     gap: 1rem;
+    font-size: 1rem;
+
 }
 
 .main_navbar .bottom-nav {
@@ -24,13 +26,15 @@
 .bottom-nav .logo-nav, .bottom-nav .side-bar {
     display: flex;
     gap: 1.5rem;
-    font-size: 1.2rem;
+    font-size: 20px;
+    font-family: "Jost", sans-serif;
+    font-weight: 700;
     padding: 30px 60px;
 }
 
 
 .side-bar div {
-    padding: 1px 15px;
+    padding: 1px 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,9 +55,10 @@
 
 .side-bar .side-bar-last-btn {
     background: #127F47;
-    padding: 8px 15px;
+    padding: 8px 10px;
     border-radius: 25px;
-    width: 230px;
+    width: 280px;
+    text-align: center;
 }
 
 
@@ -65,12 +70,17 @@
     display: none;
 }
 
-.side-bar-social-links{
+.side-bar-social-links {
     display: none !important;
 }
 
 @media (max-width: 1130px) {
+    .bottom-nav .logo-nav, .bottom-nav .side-bar {
 
+        font-size: 28px !important;
+        font-weight: 700;
+
+    }
 
     .side-bar {
         font-weight: 600;
@@ -89,14 +99,22 @@
         transform: translateX(100%);
     }
 
+    .side-bar .side-bar-last-btn {
+        background: black;
+
+        border-radius: none;
+        width: 250px;
+        text-align: center;
+    }
+
 
     .side-bar.show {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        padding: 10px;
+        padding: 20px;
         width: 70%;
-        max-width: 300px;
+        max-width: 400px;
         height: 100%;
         z-index: 1000;
         opacity: 1;
@@ -113,7 +131,7 @@
     .side-bar div a {
         color: #fff !important;
         text-decoration: none;
-        font-size: 1.2rem;
+        font-size: 28px;
     }
 
     .nav-toggler {
@@ -141,19 +159,28 @@
 }
 
 @media (max-width: 650px) {
-    .bottom-nav .logo-nav{
+    .nav-toggler {
+
+        right: 10px;
+
+    }
+
+    .bottom-nav .logo-nav {
         padding: 30px 20px;
     }
+
     .top-bar .nav-social-links {
         display: none;
     }
-    .main_navbar .top-bar{
-        
+
+    .main_navbar .top-bar {
+
         align-items: center;
         text-align: center;
         justify-content: center;
     }
-    .side-bar-social-links{
+
+    .side-bar-social-links {
         display: flex !important;
     }
 }

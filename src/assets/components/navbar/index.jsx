@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import "./navbar.css";
 const Navbar = () => {
 
@@ -8,7 +8,7 @@ const Navbar = () => {
         setSidebarVisible(!sidebarVisible);
     };
     return (
-        <div className="main_navbar">
+        <div className="main_navbar" >
             <div className="top-bar">
                 <div className="nav-social-links">
                     <div>
@@ -47,7 +47,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            <div className="bottom-nav">
+            <div className="bottom-nav" >
                 <div className="logo-nav">
                     <a href="#">
                         <div className="nav-logo"></div>
