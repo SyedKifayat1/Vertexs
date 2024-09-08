@@ -65,8 +65,11 @@
     display: none;
 }
 
+.side-bar-social-links{
+    display: none !important;
+}
 
-@media (max-width: 1090px) {
+@media (max-width: 1130px) {
 
 
     .side-bar {
@@ -75,7 +78,7 @@
         align-items: center;
         background: black;
         position: fixed;
-        right: 0;
+        right: -1px;
         height: 100%;
         width: 0;
         max-width: 0;
@@ -116,11 +119,11 @@
     .nav-toggler {
         display: block;
         cursor: pointer;
-        padding: 20px;
+        margin: 40px 20px 20px 20px;
         z-index: 99999;
         font-size: 2rem;
         position: fixed;
-        right: 20px;
+        right: 15px;
 
     }
 
@@ -133,4 +136,24 @@
         color: black;
     }
 
+
+
+}
+
+@media (max-width: 650px) {
+    .bottom-nav .logo-nav{
+        padding: 30px 20px;
+    }
+    .top-bar .nav-social-links {
+        display: none;
+    }
+    .main_navbar .top-bar{
+        
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .side-bar-social-links{
+        display: flex !important;
+    }
 }

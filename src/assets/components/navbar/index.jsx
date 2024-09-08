@@ -68,6 +68,30 @@ const Navbar = () => {
                     <div className="side-bar-last-btn">
                         <a href="#">Agency Scale Strategy Call</a>
                     </div>
+                    <div>
+                        <div className="nav-social-links side-bar-social-links">
+                            <div>
+                                <a href="">
+                                    <i className="fa-brands fa-facebook"></i>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <i className="fa-brands fa-youtube"></i>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <i className="fa-brands fa-instagram"></i>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <i className="fa-brands fa-tiktok"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Toggler button: Changes icon based on sidebar visibility */}
