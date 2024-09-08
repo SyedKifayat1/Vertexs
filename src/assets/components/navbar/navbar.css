@@ -88,6 +88,7 @@
         align-items: center;
         background: black;
         position: fixed;
+        gap: 1.6rem;
         right: -1px;
         height: 100%;
         width: 0;
