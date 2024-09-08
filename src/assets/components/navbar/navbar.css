@@ -33,14 +33,35 @@
 }
 
 
-.side-bar div {
-    padding: 1px 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-}
+    .side-bar div {
+        padding: 1px 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transition: all 0.3s ease;
+    }
 
+    .side-bar .side-bar-link::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: black; 
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease-out;
+    }
+    
+    .side-bar .side-bar-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    
 .logo-nav .nav-logo {
     width: 137px;
     height: 50px;
@@ -53,13 +74,31 @@
     color: black;
 }
 
+/* .side-bar .side-bar-last-btn {
+    background: #127F47;
+    padding: 8px 10px;
+    border-radius: 25px;
+    width: 280px;
+    text-align: center;
+} */
+
 .side-bar .side-bar-last-btn {
     background: #127F47;
     padding: 8px 10px;
     border-radius: 25px;
     width: 280px;
     text-align: center;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.side-bar .side-bar-last-btn:hover {
+   
+    transform: scale(1.05); /* Slight scale up */
+    box-shadow: 0px 8px 15px rgba(12, 12, 12, 0.2); /* More shadow on hover */
+}
+
 
 
 .side-bar .side-bar-last-btn a {
@@ -81,7 +120,11 @@
         font-weight: 700;
 
     }
-
+    .side-bar .side-bar-last-btn:hover {
+   
+        transform: scale(1); /* Slight scale up */
+        box-shadow: none; /* More shadow on hover */
+    }
     .side-bar {
         font-weight: 600;
         justify-content: center;
@@ -102,10 +145,13 @@
 
     .side-bar .side-bar-last-btn {
         background: black;
-
         border-radius: none;
-        width: 250px;
+        width: 230px;
         text-align: center;
+    }
+
+    .side-bar .side-bar-link::after{
+        background-color: #ffff;
     }
 
 
@@ -161,9 +207,7 @@
 
 @media (max-width: 650px) {
     .nav-toggler {
-
         right: 10px;
-
     }
 
     .bottom-nav .logo-nav {

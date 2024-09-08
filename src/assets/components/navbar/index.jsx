@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import "./navbar.css";
 const Navbar = () => {
 
@@ -7,6 +7,24 @@ const Navbar = () => {
     const toggleSidebar = () => {
         setSidebarVisible(!sidebarVisible);
     };
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 1130) {
+                setSidebarVisible(false);
+            }
+        };
+
+        // Attach the event listener
+        window.addEventListener('resize', handleResize);
+
+        // Initial check to hide sidebar if already greater than 1130px
+        handleResize();
+
+        // Cleanup the event listener on component unmount
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return (
         <div className="main_navbar" >
             <div className="top-bar">
@@ -56,16 +74,16 @@ const Navbar = () => {
 
                 {/* Sidebar: Toggles between 'show' and 'hide' based on sidebarVisible state */}
                 <div className={`side-bar ${sidebarVisible ? 'show' : 'hide'}`}>
-                    <div>
+                    <div className='side-bar-link'>
                         <a href="#">How it works</a>
                     </div>
-                    <div>
+                    <div className='side-bar-link'>
                         <a href="#">Careers</a>
                     </div>
-                    <div>
+                    <div className='side-bar-link'>
                         <a href="#">Our Roles</a>
                     </div>
-                    <div className="side-bar-last-btn">
+                    <div className={`side-bar-last-btn ${sidebarVisible ? 'side-bar-link' : ''}`}>
                         <a href="#">Agency Scale Strategy Call</a>
                     </div>
                     <div>
