@@ -36,7 +36,8 @@
     align-items: center;
 
 }
-.logo-nav .nav-logo{
+
+.logo-nav .nav-logo {
     width: 137px;
     height: 50px;
     background: url('../../gallery/RepStack-logo-black.webp') no-repeat;
@@ -50,16 +51,86 @@
 
 .side-bar .side-bar-last-btn {
     background: #127F47;
-    /* padding: 5px 15px; */
+    padding: 8px 15px;
     border-radius: 25px;
+    width: 230px;
 }
 
 
-.side-bar .side-bar-last-btn  a {
+.side-bar .side-bar-last-btn a {
     color: #ffff !important;
 }
 
+.nav-toggler {
+    display: none;
+}
 
-@media (max-width: 1090px){
+
+@media (max-width: 1090px) {
+
+
+    .side-bar {
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        background: black;
+        position: fixed;
+        right: 0;
+        height: 100%;
+        width: 0;
+        max-width: 0;
+        overflow: hidden;
+        transition: width 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+        z-index: 1000;
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+
+    .side-bar.show {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        width: 70%;
+        max-width: 300px;
+        height: 100%;
+        z-index: 1000;
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+
+    .side-bar.hide {
+        opacity: 0;
+        transform: translateX(100%);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .side-bar div a {
+        color: #fff !important;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+
+    .nav-toggler {
+        display: block;
+        cursor: pointer;
+        padding: 20px;
+        z-index: 99999;
+        font-size: 2rem;
+        position: fixed;
+        right: 20px;
+
+    }
+
+    .nav-toggler .fa-xmark {
+        color: #ffff;
+
+    }
+
+    .nav-toggler .fa-bars {
+        color: black;
+    }
 
 }

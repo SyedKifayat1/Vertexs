@@ -2,29 +2,33 @@ import React, { useState } from 'react';
 import "./navbar.css";
 const Navbar = () => {
 
+    const [sidebarVisible, setSidebarVisible] = useState(false);
 
+    const toggleSidebar = () => {
+        setSidebarVisible(!sidebarVisible);
+    };
     return (
         <div className="main_navbar">
             <div className="top-bar">
                 <div className="nav-social-links">
                     <div>
                         <a href="">
-                            <i class="fa-brands fa-facebook"></i>
+                            <i className="fa-brands fa-facebook"></i>
                         </a>
                     </div>
                     <div>
                         <a href="">
-                            <i class="fa-brands fa-youtube"></i>
+                            <i className="fa-brands fa-youtube"></i>
                         </a>
                     </div>
                     <div>
                         <a href="">
-                            <i class="fa-brands fa-instagram"></i>
+                            <i className="fa-brands fa-instagram"></i>
                         </a>
                     </div>
                     <div>
                         <a href="">
-                            <i class="fa-brands fa-tiktok"></i>
+                            <i className="fa-brands fa-tiktok"></i>
                         </a>
                     </div>
                 </div>
@@ -39,30 +43,44 @@ const Navbar = () => {
                         <a href="">Blogs</a>
                     </div>
                     <div>
-                        <a href="">+9230000000</a>
+                        <a href="">+923000000000</a>
                     </div>
                 </div>
             </div>
             <div className="bottom-nav">
                 <div className="logo-nav">
-                    <a href=""><div className="nav-logo"></div></a>
+                    <a href="#">
+                        <div className="nav-logo"></div>
+                    </a>
                 </div>
-                <div className="side-bar">
+
+                {/* Sidebar: Toggles between 'show' and 'hide' based on sidebarVisible state */}
+                <div className={`side-bar ${sidebarVisible ? 'show' : 'hide'}`}>
                     <div>
-                        <a href="">How it works</a>
+                        <a href="#">How it works</a>
                     </div>
                     <div>
-                        <a href="">Careers</a>
+                        <a href="#">Careers</a>
                     </div>
                     <div>
-                        <a href="">Our Roles</a>
+                        <a href="#">Our Roles</a>
                     </div>
                     <div className="side-bar-last-btn">
-                        <a href="">Agency Scale Strrategy Call</a>
+                        <a href="#">Agency Scale Strategy Call</a>
                     </div>
                 </div>
+
+                {/* Toggler button: Changes icon based on sidebar visibility */}
+                <div className="nav-toggler" onClick={toggleSidebar}>
+                    {sidebarVisible ? (
+                        <i className="fa-solid fa-xmark"></i>
+                    ) : (
+                        <i className="fa-solid fa-bars"></i>
+                    )}
+                </div>
             </div>
-            
+
+
         </div>
     );
 };
