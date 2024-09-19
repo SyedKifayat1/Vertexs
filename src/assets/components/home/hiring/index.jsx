@@ -1,6 +1,6 @@
 // import React from 'react';
 import VaPic from "../../../gallery/RepStack-Home-Page-Pic.webp";
-import './hiring.css';
+import './Hiring.css';
 
 const Hiring = () => {
     return (
