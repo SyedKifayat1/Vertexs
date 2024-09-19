@@ -1,0 +1,105 @@
+.hiring-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #635985; /* Lightest purple from the palette */
+    padding: 40px 20px;
+}
+
+.hiring-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.hiring-image-container {
+    flex-basis: 40%;
+}
+
+.hiring-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure the image covers the div without distorting */
+}
+
+.hiring-content {
+    flex-basis: 60%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #443C68; /* Second lightest purple */
+}
+
+.hiring-title {
+    font-size: 2.5rem;
+    color: #18122B; /* Darkest purple */
+    margin: 0;
+    padding-top: 10px;
+}
+
+.hiring-subtitle {
+    font-size: 1.5rem;
+    color: #393053; /* Mid purple */
+    margin: 0;
+    padding: 10px 0;
+}
+
+.hiring-description {
+    font-size: 1rem;
+    color: #FFFFFF; /* White for better contrast */
+    line-height: 1.5;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.hiring-highlight {
+    font-size: 1.2rem;
+    color: #FFFFFF; /* White for visibility */
+    margin-top: 20px;
+}
+
+.hiring-benefits {
+    display: flex;
+    margin-top: 20px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    margin-right: 15px; /* Spacing between items */
+}
+
+.tick-icon {
+    color: #28a745; /* Green check for visibility */
+    margin-right: 5px;
+    font-size: 24px;
+}
+
+.icon-details {
+    font-size: 14px;
+    color: #FFFFFF; /* White for visibility */
+}
+
+.hiring-button-container {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.hiring-button {
+    padding: 10px 20px;
+    background-color: #18122B; /* Darkest purple */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.hiring-button:hover {
+    background-color: #393053; /* Mid purple for hover effect */
+}
