@@ -307,9 +307,9 @@
 }
 
 .logo-nav .nav-logo {
-    width: 137px;
+    width: 200px;
     height: 50px;
-    background: url('../../gallery/white_logo.png') no-repeat;
+    background: url('../../gallery/black_logo1.png') no-repeat;
     background-size: contain;
     margin-right: 20px;
 }
