@@ -37,14 +37,14 @@
 
 .hiring-title {
     font-size: 2.5rem;
-    color: #18122B; /* Darkest purple */
+    color: #f7f6fa; /* Darkest purple */
     margin: 0;
     padding-top: 10px;
 }
 
 .hiring-subtitle {
     font-size: 1.5rem;
-    color: #393053; /* Mid purple */
+    color: #a6a5aa; /* Mid purple */
     margin: 0;
     padding: 10px 0;
 }
@@ -91,15 +91,24 @@
 }
 
 .hiring-button {
-    padding: 10px 20px;
+    padding: 10px 30px;
     background-color: #18122B; /* Darkest purple */
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
     font-size: 16px;
 }
-
+.hiring-button i{
+    background-color: #393053;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
 .hiring-button:hover {
     background-color: #393053; /* Mid purple for hover effect */
+}
+
+.hiring-button:hover i{
+    background-color: #18122B; /* Mid purple for hover effect */
 }

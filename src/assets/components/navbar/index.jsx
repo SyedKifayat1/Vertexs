@@ -1,6 +1,25 @@
 import { useState,useEffect } from 'react';
 import "./navbar.css";
 const Navbar = () => {
+    const [isSticky, setIsSticky] = useState(false);
+
+  // Handle scroll event to detect when to make the nav sticky
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up event listener when component is unmounted
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
     const [sidebarVisible, setSidebarVisible] = useState(false);
 
@@ -65,7 +84,18 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            <div className="bottom-nav" >
+            <div className="bottom-nav" 
+            style={{
+                position: isSticky ? 'fixed' : 'relative', // Change position based on scroll
+                top: isSticky ? 0 : 'auto', // Stick to the top when scrolled
+                zIndex: 1000, // Ensure it's above other content
+                backgroundColor: '#f4f2f8', // Light purple background
+                boxShadow: isSticky ? '0 2px 5px rgba(0, 0, 0, 0.1)' : 'none', // Add shadow when sticky
+                transition: 'box-shadow 0.3s ease', // Smooth transition of the shadow
+                width: '100%', // Make it take full width of the viewport
+                left: 0, // Ensure it sticks to the left side
+              }}
+            >
                 <div className="logo-nav">
                     <a href="#">
                         <div className="nav-logo"></div>

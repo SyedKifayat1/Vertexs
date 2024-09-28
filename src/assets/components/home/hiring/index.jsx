@@ -34,7 +34,7 @@ const Hiring = () => {
                         </div>
                     </div>
                     <div className="hiring-button-container">
-                        <button type="button" className="hiring-button">Virtual Assistant Roles</button>
+                        <button type="button" className="hiring-button">Virtual Assistant Roles <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </div>
             </div>
