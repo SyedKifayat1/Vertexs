@@ -25,12 +25,15 @@
    .team {
     text-align: center;
     padding: 40px 20px;
-    background-color: #f7f7fb;
+    /* background-color: #f7f7fb; */
+    background-color: #4f4773;
+
   }
   
   .team-title h2 {
     font-size: 2.5rem;
-    color: #443C68;
+    color: #fff;
+    /* color: #443C68; */
     margin-bottom: 30px;
   }
   
