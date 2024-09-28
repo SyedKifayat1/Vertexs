@@ -98,7 +98,7 @@
 }
 
 .hiring-button {
-    padding: 10px 30px;
+    padding: 6px 25px;
     background-color: #18122B;
     color: white;
     border: none;
@@ -110,7 +110,7 @@
 
 .hiring-button i {
     background-color: #393053;
-    padding: 10px;
+    padding: 8px;
     margin-left: 10px;
     border-radius: 50%;
     transition: background-color 0.3s ease;
