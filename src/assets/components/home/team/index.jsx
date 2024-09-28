@@ -107,7 +107,7 @@ const Team = () => {
                             borderRadius: "10px",
                             p: "25px 20px",
                             mb: "15px",
-                            gap:"5px",
+                            gap: "5px",
                             display: "flex",
                             flexDirection: "column",
                             alignItems: "center",
@@ -158,7 +158,7 @@ const Team = () => {
                         </Typography>
 
                         <a href="#" className="text-decoration-none">
-                            <Button
+                            {/* <Button
                                 sx={{
                                     background: "#EDEFF5",
                                     border: "1px solid #EDEFF5",
@@ -171,7 +171,10 @@ const Team = () => {
                                 color="primary"
                             >
                                 View Details
-                            </Button>
+                            </Button> */}
+                            <div className="hiring-button-container">
+                                <button type="button" className="hiring-button">Learn More<i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
                         </a>
                     </Card>
                 </div>
