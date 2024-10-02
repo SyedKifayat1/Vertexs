@@ -103,15 +103,35 @@
 import { Box, Grid, Typography, Link, IconButton } from '@mui/material';
 import { Email, Phone, LocationOn, Facebook, Twitter, LinkedIn, Instagram } from '@mui/icons-material';
 import Logo from '../../gallery/black_logo1.png';
+import { useMediaQuery, useTheme } from '@mui/material';
 
 const Footer = () => {
+
+
+  const theme = useTheme();
+  
+  // Media queries for different screen sizes
+  const isXs = useMediaQuery(theme.breakpoints.only('xs'));
+  const isSm = useMediaQuery(theme.breakpoints.only('sm'));
+  const isLg = useMediaQuery(theme.breakpoints.only('lg'));
+  // const isXl = useMediaQuery(theme.breakpoints.only('xl'));
+
+  // Determine variant based on screen size
+  const getVariant = () => {
+    if (isXs) return 'h5'; // For extra small screens
+    if (isSm) return 'h5'; // For small screens
+    // if (isMd) return 'h4'; // For medium screens
+    if (isLg) return 'h4'; // For large screens
+    return 'h4';           // For extra-large screens
+  };
   return (
     <Box sx={{ backgroundColor: '#f8f9fa', py: { xs: 3, md: 5 }, px: { xs: 2, md: 4 } }}>
-      <Grid container spacing={4} sx={{ justifyContent: { xs: 'center', md: 'space-between' }, alignItems: 'center' }}>
+      <Grid container spacing={4} sx={{ justifyContent: {xl:"space-between", xs: 'center', md: 'space-between' }, }}>
         
         {/* Company Section */}
         <Grid item xs={12} sm={6} md={4} sx={{ textAlign: 'center' }}>
-          <Typography variant="h6" gutterBottom>
+          {/* <Typography variant="h4" gutterBottom> */}
+          <Typography variant={getVariant()} gutterBottom>
             Company
           </Typography>
           <Box>
@@ -129,8 +149,8 @@ const Footer = () => {
         </Grid>
 
         {/* Our Hiring Section */}
-        <Grid item xs={12} sm={6} md={4} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
-          <Typography variant="h6" gutterBottom>
+        <Grid item xs={12} sm={6} md={4} sx={{ textAlign:  'center' }}>
+          <Typography variant={getVariant()}  gutterBottom>
             Our Hiring
           </Typography>
           <Box component="ul" sx={{ listStyle: 'none', padding: 0 }}>
@@ -150,8 +170,8 @@ const Footer = () => {
         </Grid>
 
         {/* About Us Section */}
-        <Grid item xs={12} sm={6} md={4} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
-          <Typography variant="h6" gutterBottom>
+        <Grid item xs={12} sm={6} md={4} sx={{ textAlign: 'center'}}>
+          <Typography variant={getVariant()}  gutterBottom>
             About Us
           </Typography>
           <Box component="ul" sx={{ listStyle: 'none', padding: 0 }}>
