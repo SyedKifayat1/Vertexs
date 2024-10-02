@@ -6,7 +6,7 @@
 //   return (
 //     <Box sx={{ backgroundColor: '#f8f9fa', py: 4, px: 2 }}>
 //       <Grid container spacing={4} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        
+
 //         {/* Company Section */}
 //         <Grid item xs={12} md={4} sx={{ textAlign: 'center' }}>
 //           <Typography variant="h6" gutterBottom>
@@ -109,7 +109,7 @@ const Footer = () => {
 
 
   const theme = useTheme();
-  
+
   // Media queries for different screen sizes
   const isXs = useMediaQuery(theme.breakpoints.only('xs'));
   const isSm = useMediaQuery(theme.breakpoints.only('sm'));
@@ -126,66 +126,67 @@ const Footer = () => {
   };
   return (
     <Box sx={{ backgroundColor: '#f8f9fa', py: { xs: 3, md: 5 }, px: { xs: 2, md: 4 } }}>
-      <Grid container spacing={4} sx={{ justifyContent: {xl:"space-between", xs: 'center', md: 'space-between' }, }}>
-        
+      <Grid container spacing={4} sx={{ justifyContent: { xl: "space-between", xs: 'center', md: 'space-between' }, }}>
+
         {/* Company Section */}
         <Grid item xs={12} sm={6} md={4} sx={{ textAlign: 'center' }}>
           {/* <Typography variant="h4" gutterBottom> */}
-          <Typography variant={getVariant()} gutterBottom>
+          <Typography sx={{color:"#4a4270"}} variant={getVariant()} gutterBottom>
             Company
           </Typography>
           <Box>
             <img src={Logo} alt="Company Logo" style={{ width: '100px', marginBottom: '10px' }} />
-            <Typography variant="body1" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 1 }}>
+            <Typography variant="body1" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 1,color:"#4a4270" }}>
               <LocationOn sx={{ mr: 1 }} /> Lahore, Pakistan
             </Typography>
-            <Typography variant="body1" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 1 }}>
+            <Typography variant="body1" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 1,color:"#4a4270" }}>
               <Phone sx={{ mr: 1 }} /> +9230000010
             </Typography>
-            <Typography variant="body1" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 1 }}>
+            <Typography variant="body1" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 1 ,color:"#4a4270"}}>
               <Email sx={{ mr: 1 }} /> info@vertex.com
             </Typography>
           </Box>
         </Grid>
 
         {/* Our Hiring Section */}
-        <Grid item xs={12} sm={6} md={4} sx={{ textAlign:  'center' }}>
-          <Typography variant={getVariant()}  gutterBottom>
+        <Grid item xs={12} sm={6} md={4} sx={{ textAlign: 'center' }}>
+          <Typography sx={{color:"#4a4270"}} variant={getVariant()} gutterBottom>
             Our Hiring
           </Typography>
           <Box component="ul" sx={{ listStyle: 'none', padding: 0 }}>
-            <li>
+            <li style={{ marginBottom: '10px',color:"#4a4270" }}>
               <Link href="#" underline="none" color="inherit">Executive Assistant</Link>
             </li>
-            <li>
+            <li style={{ marginBottom: '10px',color:"#4a4270" }}>
               <Link href="#" underline="none" color="inherit">Marketing Associate</Link>
             </li>
-            <li>
+            <li style={{ marginBottom: '10px',color:"#4a4270" }}>
               <Link href="#" underline="none" color="inherit">Sales Development Rep</Link>
             </li>
             <li>
-              <Link href="#" underline="none" color="inherit">Account Manager</Link>
+              <Link href="#" underline="none" color="inherit" style={{ color:"#4a4270" }}>Account Manager</Link>
             </li>
           </Box>
         </Grid>
 
+
         {/* About Us Section */}
-        <Grid item xs={12} sm={6} md={4} sx={{ textAlign: 'center'}}>
-          <Typography variant={getVariant()}  gutterBottom>
+        <Grid item xs={12} sm={6} md={4} sx={{ textAlign: 'center' }}>
+          <Typography sx={{color:"#4a4270"}} variant={getVariant()} gutterBottom>
             About Us
           </Typography>
-          <Box component="ul" sx={{ listStyle: 'none', padding: 0 }}>
-            <li>
+          <Box component="ul" sx={{ listStyle: 'none', padding: 0, gap: 1 }}>
+            <li style={{ marginBottom: '10px',color:"#4a4270" }}>
               <Link href="#" underline="none" color="inherit">Careers</Link>
             </li>
-            <li>
+            <li style={{ marginBottom: '10px',color:"#4a4270" }}>
               <Link href="#" underline="none" color="inherit">Podcast</Link>
             </li>
-            <li>
+            <li style={{ marginBottom: '10px',color:"#4a4270" }}>
               <Link href="#" underline="none" color="inherit">Blog</Link>
             </li>
             <li>
-              <Link href="#" underline="none" color="inherit">FAQs</Link>
+              <Link href="#" underline="none" color="inherit" style={{ color:"#4a4270" }}>FAQs</Link>
             </li>
           </Box>
         </Grid>
